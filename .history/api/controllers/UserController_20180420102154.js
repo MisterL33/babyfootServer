@@ -6,7 +6,6 @@
  */
 
 var bcrypt = require('bcryptjs');
-var jwt = require('jsonwebtoken');
 
 module.exports = {
 
@@ -36,15 +35,6 @@ module.exports = {
     if(req.param('password').length < 10){
         return res.badRequest('Mot de passe trop court');
     }
-
-
-    var user = await sails.helpers.createUser({
-        email: req.param('email'),
-        password: req.param('password')
-    });
-    
-    var token = jwt.sign({user: user.id},sails.config.jwt.jwtSecret, {expiresIn: sails.config.jwt.jwtExpiresIn});
-    return res.ok(token);
 
   }
 

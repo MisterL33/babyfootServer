@@ -45,6 +45,7 @@ module.exports.routes = {
   //  ╩ ╩╩  ╩  ╚═╝╝╚╝═╩╝╩  ╚═╝╩╝╚╝ ╩ ╚═╝
 
   'post /api/login' : "UserController.login",
+  'patch /api/login' : "UserController.login",
   'post /api/register' : "UserController.register"
 
   //  ╦ ╦╔═╗╔╗ ╦ ╦╔═╗╔═╗╦╔═╔═╗
