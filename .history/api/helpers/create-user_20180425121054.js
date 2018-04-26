@@ -23,7 +23,7 @@ module.exports = {
     },
     prenom: {
       type: 'string',
-    },
+
     sexe: {
       type: 'string',
       

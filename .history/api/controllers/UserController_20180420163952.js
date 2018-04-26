@@ -22,13 +22,7 @@ module.exports = {
     await bcrypt.compareSync((req.body.password), user.password);
 
     var token = jwt.sign({user: user.id},sails.config.jwt.jwtSecret, {expiresIn: sails.config.jwt.jwtExpiresIn});
-    var obj = {
-      email: user.email,
-      nom: user.nom,
-      prenom: user.prenom,
-      token: token
-    };
-    return res.ok(obj);
+    return res.ok(token);
   },
 
 
@@ -47,15 +41,10 @@ module.exports = {
 
     var user = await sails.helpers.createUser({
       email: req.param('email'),
-      nom: req.param('nom'),
-      prenom: req.param('prenom'),
-      password: req.param('password'),
-      naissance: req.param('naissance'),
-      sexe: req.param('sexe')
-
+      password: req.param('password')
     });
 
-    var token = jwt.sign({user: user.id },sails.config.jwt.jwtSecret, {expiresIn: sails.config.jwt.jwtExpiresIn});
+    var token = jwt.sign({user: user.id, 'ok'},sails.config.jwt.jwtSecret, {expiresIn: sails.config.jwt.jwtExpiresIn});
     return res.ok(token);
 
   }

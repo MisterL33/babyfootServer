@@ -23,13 +23,6 @@ module.exports = {
     },
     prenom: {
       type: 'string',
-    },
-    sexe: {
-      type: 'string',
-      
-    },
-    naissance: {
-      type: 'string',
       
     },
 
@@ -51,10 +44,6 @@ module.exports = {
   fn: async function (inputs, exits) {
     attr = {};
     attr.email = inputs.email.toLowerCase();
-    attr.nom = inputs.nom;
-    attr.prenom = inputs.prenom;
-    attr.sexe = inputs.sexe;
-    attr.naissance = inputs.naissance;
     if(inputs.password){
       attr.password = await bcrypt.hash(inputs.password, 10);
       var user = await User.create(attr)

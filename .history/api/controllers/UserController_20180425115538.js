@@ -49,9 +49,7 @@ module.exports = {
       email: req.param('email'),
       nom: req.param('nom'),
       prenom: req.param('prenom'),
-      password: req.param('password'),
-      naissance: req.param('naissance'),
-      sexe: req.param('sexe')
+      password: req.param('password')
 
     });
 
