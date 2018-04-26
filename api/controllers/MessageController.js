@@ -35,6 +35,9 @@ module.exports = {
             message: req.param('message')
 
         });
+        console.log(message)
+        sails.sockets.broadcast('message', message);
+
 
         // var token = jwt.sign({user: user.id },sails.config.jwt.jwtSecret, {expiresIn: sails.config.jwt.jwtExpiresIn});
         return res.ok(message);
