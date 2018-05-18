@@ -69,8 +69,6 @@ module.exports = {
       team: user.team,
       token: token
     };
-
-    console.log(obj);
     return res.ok(obj);
 
   },
