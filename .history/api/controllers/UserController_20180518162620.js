@@ -62,12 +62,12 @@ module.exports = {
 
     var token = jwt.sign({ user: user.id }, sails.config.jwt.jwtSecret, { expiresIn: sails.config.jwt.jwtExpiresIn });
     var obj = {
-      id: user.id,
-      email: user.email,
-      nom: user.nom,
-      prenom: user.prenom,
-      team: user.team,
-      token: token
+      id: token.id,
+      email: token.email,
+      nom: token.nom,
+      prenom: token.prenom,
+      team: token.team,
+      token: token.token
     };
 
     console.log(obj);

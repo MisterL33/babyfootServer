@@ -17,8 +17,8 @@ module.exports = {
       }
     
       team = await sails.helpers.createTeam({ // on créer une nouvelle team
-        owner: req.param('owner'),
-        nom: req.param('nom')
+        owner: req.body.owner,
+        nom: req.body.nom
       });
       console.log(team);
       //on link manuellement la team a l'user
