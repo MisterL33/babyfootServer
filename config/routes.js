@@ -49,9 +49,13 @@ module.exports.routes = {
   'post /api/team/create' : "TeamController.register",
   'post /api/team/check' : "TeamController.check",
   'post /api/update/token': "UserController.update",
-  'post /api/team/join' : "TeamController.join"
+  'post /api/team/join' : "TeamController.join",
 
-  //  ╦ ╦╔═╗╔╗ ╦ ╦╔═╗╔═╗╦╔═╔═╗
+
+    'post /api/match/join' : "MatchController.join"
+
+
+    //  ╦ ╦╔═╗╔╗ ╦ ╦╔═╗╔═╗╦╔═╔═╗
   //  ║║║║╣ ╠╩╗╠═╣║ ║║ ║╠╩╗╚═╗
   //  ╚╩╝╚═╝╚═╝╩ ╩╚═╝╚═╝╩ ╩╚═╝
 

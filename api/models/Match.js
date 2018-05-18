@@ -12,28 +12,29 @@ module.exports = {
     duration:
       {
         type: 'number',
-        required: true,
+          defaultsTo: 3600
       },
 
     redScore:
     {
       type: 'number',
-      required: true
+        defaultsTo: 0
     },
     blueScore:
     {
       type: 'number',
-      required: true
+        defaultsTo: 0
+
     },
     played:
     {
       type: 'boolean',
-      required: true,
+        defaultsTo: false
     },
     pending:
     {
       type: 'boolean',
-      required: true,
+        defaultsTo: false
     },
 
     //  ╔═╗╦═╗╦╔╦╗╦╔╦╗╦╦  ╦╔═╗╔═╗
