@@ -52,7 +52,8 @@ module.exports.routes = {
   'post /api/team/join' : "TeamController.join",
 
 
-    'post /api/match/join' : "MatchController.join"
+    'post /api/match/join' : "MatchController.join",
+    'post /match/but' : "MatchController.but"
 
 
     //  ╦ ╦╔═╗╔╗ ╦ ╦╔═╗╔═╗╦╔═╔═╗

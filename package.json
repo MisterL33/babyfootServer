@@ -10,6 +10,7 @@
     "body-parser": "^1.18.2",
     "connect-redis": "3.2.0",
     "grunt": "1.0.1",
+    "johnny-five": "^0.15.0",
     "jsonwebtoken": "^8.2.1",
     "lodash": "3.10.1",
     "sails": "^1.0.0-41",
